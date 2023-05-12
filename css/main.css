@@ -1,0 +1,124 @@
+*, 
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/roboto.woff2") format("woff2"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("/fonts/roboto.woff") format("woff");
+  }
+
+body{
+    font-family: sant-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #111;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 40px auto;
+    overflow: hidden;
+    background-color: rgba(242, 233, 233, 0.5);
+    padding: 20px; 
+     
+}
+
+.wrapper img {
+    width: 100%;
+ }
+
+p {
+    text-indent: 20px;
+  }
+
+h2{
+padding: 15px;
+font-family: "Roboto", "Arial", sans-serif;
+  }
+
+.header {
+    max-width: 300px; 
+    
+}
+
+.main h2:nth-of-type(2n) 
+{
+    color: rgb(5, 5, 146);    
+}
+
+.main span:nth-of-type(2n) 
+{
+    font-family: serif;       
+    background-color: rgba(57, 115, 232, 0.05);
+    display: inline-block;
+}
+
+.main h2:nth-of-type(2n+1)
+{
+    color: rgb(9, 130, 160);
+}
+
+.main span:nth-of-type(2n+1) 
+{
+    background-color: rgba(3, 201, 169, 0.1);
+    display: inline-block;    
+}
+
+/* Убираем маркеры и отступы */
+.my_menu {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .my_menu li {
+    margin:0;
+    padding:0;
+    position: relative;
+  
+  }
+  /* Общие правила для пунктов меню */
+  .my_menu li a {
+    display:block;
+    margin:0;
+    padding:6px 10px;
+    text-decoration: none;
+  }
+  /*Наведение на активный пункт меню - курсор обычный */
+  .my_menu li.active > a:hover {
+    cursor: default;
+  }
+
+  /* === Цветовое оформление menu_color === */
+.menu_color {
+    background:rgba(242, 233, 233, 0.6);
+    border: 1px solid rgba(29, 25, 25, 0.082);
+  }
+  /* Оформление пункта */
+  .menu_color > ul > li > a {
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    color:#1b0202;
+    background: rgba(0, 0, 0, 0);
+  }
+  /* Подсветка пункта при наведении */
+  .menu_color > ul > li > a:hover {
+    color: #000000;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  /* Активный пункт */
+  .menu_color > ul > li.active > a,
+  .menu_color > ul > li.active > a:hover {
+    color:#fff;
+    background:rgba(0, 0, 0, 0.4);
+  }
